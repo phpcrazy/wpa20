@@ -1,19 +1,18 @@
 <?php 
 
 define("DD", "../");
+require DD . "app/controller/controllers.php";
 require DD . "wpa20/functions.php";
 
 if(empty($_GET['page'])) {
-	make_view("home");
+	_HomeController();
 } else {
 	$page = $_GET['page'];
-	$data = [
-		'title'	=> 'Myanmar Links',
-		'username'	=> "Soe Thiha",
-		"address"	=> 'Hledan'
-	];
-	make_view($page, $data);
-	
+	if($page == "page") {
+		_PageController($page);	
+	} else if($page == "seed") {
+		_SeedController($page);
+	} 
 }
 
 ?>
