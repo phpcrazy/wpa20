@@ -5,7 +5,7 @@
 	<title>Home Page</title>
 </head>
 <body>
-	<h1>Home Page</h1>
+	<h1>Myanmar Links</h1>
 	<p>
 		<a href="index.php?page=blog">Blog</a>
 	</p>

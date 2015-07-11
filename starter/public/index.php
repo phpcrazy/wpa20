@@ -1,16 +1,19 @@
 <?php 
 
 define("DD", "../");
+require DD . "wpa20/functions.php";
 
 if(empty($_GET['page'])) {
-	include DD . "app/view/home.php";
+	make_view("home");
 } else {
 	$page = $_GET['page'];
-	$file = DD . "app/view/" . $page . ".php";
-	if(file_exists($file)) {
-		include $file;
-	} else {
-		echo "404";
-	}
+	$data = [
+		'title'	=> 'Myanmar Links',
+		'username'	=> "Soe Thiha",
+		"address"	=> 'Hledan'
+	];
+	make_view($page, $data);
+	
 }
+
 ?>

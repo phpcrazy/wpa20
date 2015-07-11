@@ -5,6 +5,6 @@
 	<title>Seed</title>
 </head>
 <body>
-	<h1>Seeding</h1>
+	<h1><?php echo $seedname; ?></h1>
 </body>
 </html>
