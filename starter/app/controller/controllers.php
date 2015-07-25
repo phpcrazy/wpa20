@@ -4,21 +4,21 @@ function _HomeController() {
 	make_view("home");
 }
 
-function _PageController($page) {
+function _PageController() {
 	$data = [
 		'title'	=> 'Myanmar Links',
 		'username'	=> "Soe Thiha",
 		"address"	=> 'Hledan'
 	];
-	make_view($page, $data);
+	make_view("page", $data);
 }
 
-function _SeedController($page) {
-	$data = [
-		'seedname' => "Test"
-	];
+function _BlogController() {
+	make_view("blog");
+}
 
-	make_view($page, $data);
+function _AboutController() {
+	make_view("about");
 }
 
 
