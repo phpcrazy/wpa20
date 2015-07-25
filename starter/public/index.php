@@ -22,7 +22,7 @@ if(array_key_exists($page, $routes)) {
 	if(function_exists($routes[$page])) {
 		array_shift($request_value);
 
-		call_user_func($routes[$page], array_values($request_value));	
+		call_user_func_array($routes[$page], $request_value);	
 	} else {
 		trigger_error("Controller does not exists!", E_USER_ERROR);
 	}

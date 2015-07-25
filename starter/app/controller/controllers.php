@@ -13,8 +13,8 @@ function _PageController() {
 	make_view("page", $data);
 }
 
-function _BlogController($category) {
-	var_dump($category);
+function _BlogController($category, $id) {
+	echo $category . " in " . $id;
 	make_view("blog");
 }
 
