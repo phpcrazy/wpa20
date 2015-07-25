@@ -21,5 +21,9 @@ function _AboutController() {
 	make_view("about");
 }
 
+function _FoobarController() {
+	make_view("foobar");
+}
+
 
  ?>

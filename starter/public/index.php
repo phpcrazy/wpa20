@@ -6,8 +6,13 @@ require DD . "wpa20/functions.php";
 
 $routes = include DD . "app/routes.php";
 
-if(isset($_GET['page'])) {
-	$page = htmlspecialchars($_GET['page']);
+$request_uri = explode('/', $_SERVER['REQUEST_URI']);
+$script_name = explode('/', $_SERVER['SCRIPT_NAME']);
+$request_value = array_diff($request_uri, $script_name);
+$request_value = array_values($request_value);
+
+if(!empty($request_value)) {
+	$page = htmlspecialchars($request_value[0]);
 } else {
 	$page = '';
 }
