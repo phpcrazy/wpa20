@@ -1,0 +1,11 @@
+{
+  "autoload" : {
+    "classmap": [
+      "app/controller",
+      "wpa20/loader"
+    ],
+    "files": [
+      "wpa20/helpers.php"
+    ]
+  }
+}

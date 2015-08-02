@@ -12,6 +12,10 @@ $request_value = array_diff($request_uri, $script_name);
 $request_value = array_values($request_value);
 
 
+// mysql_connect (deprecated)
+// mysqli
+// PDO *****
+
 if(!empty($request_value)) {
 	$page = htmlspecialchars($request_value[0]);
 } else {
