@@ -2,7 +2,8 @@
   "autoload" : {
     "classmap": [
       "app/controller",
-      "wpa20/loader"
+      "wpa20/loader",
+      "wpa20/provider"
     ],
     "files": [
       "wpa20/helpers.php"
