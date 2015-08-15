@@ -8,8 +8,11 @@
 
 class HomeController {
     public function index() {
-        $students = DB::table("students")->get();
+        $students = DB::table("students")->find("5");
 
+        $all_students = DB::table("students")->where("name", "Aung Aung")->get();
+
+        var_dump($all_students);
         // dump($students, true);
         $data = [
             'site_title'  => Config::get("app.site_title"),
